@@ -386,3 +386,89 @@ section {
   display: block;
   z-index: 10;
 }
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: #003366; /* same blue as cta-section */
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px rgba(46, 157, 247, 0.18); /* blue shadow */
+  padding: 32px 24px 24px 24px;
+  max-width: 340px;
+  width: 90vw;
+  position: relative;
+  text-align: center;
+  /* border removed */
+}
+.modal-content h2 {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #ffd100; /* yellow for contrast */
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.modal-close:hover {
+  color: #fff;
+}
+#donate-form label {
+  color: #fff;
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+}
+#donate-form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1rem;
+  border: 1.5px solid #2E9DF7;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  box-sizing: border-box;
+  background: #fff;
+  color: #003366;
+}
+#donate-form button[type="submit"] {
+  background: #ffd100; /* same yellow as .cta-button */
+  color: #073366; /* same blue as .cta-button */
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 18px 44px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+}
+#donate-form button[type="submit"]:hover {
+  background: #ffe066;
+  color: #073366;
+}
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 18px 6px 12px 6px;
+    max-width: 96vw;
+  }
+}
